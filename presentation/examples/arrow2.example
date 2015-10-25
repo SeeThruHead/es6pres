@@ -1,0 +1,13 @@
+function foo() {
+   return () => {
+      return () => {
+         return () => {
+            console.log('id: ' + this.id);
+            console.log(arguments);
+         };
+      };
+   };
+}
+
+foo.call({ id: 42 }, 'one', 'two')()()();
+// 'id: 42', { 0: 'one', 1: 'two' }

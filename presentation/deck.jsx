@@ -10,7 +10,6 @@ import preloader from "../src/utils/preloader";
 import Interactive from "./interactive";
 
 const images = {
-  city: require("./city.jpg"),
   kat: require("./kat.png"),
   logo: require("./formidable-logo.svg")
 };
@@ -23,98 +22,187 @@ export default class extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={800}>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="black">
-            Spectacle
+            ES2015
           </Heading>
-          <Heading size={1} fit caps>
-            A ReactJS Presentation Library
+          <Heading size={1} fit caps lineHeight={1}>
+            An Introduction
           </Heading>
-          <Heading size={1} fit caps textColor="black">
-            Where You Can Write Your Decks In JSX
-          </Heading>
-          <Link href="https://github.com/FormidableLabs/spectacle">
-            <Text bold caps textColor="tertiary">View on Github</Text>
-          </Link>
-          <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
         </Slide>
         <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
-          <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
           <Heading size={1} fit textColor="primary" textFont="secondary">
-            Wait what?
+            Let & Const
           </Heading>
         </Slide>
         <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
           <CodePane
             lang="javascript"
-            source={require("raw!./deck.example")}
+            source={require("raw!./examples/const.example")}
             margin="20px auto"/>
         </Slide>
-        <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/let.example")}
+            margin="20px auto"/>
+          <Appear fid="2">
+            <CodePane
+              lang="javascript"
+              source={require("raw!./examples/let2.example")}
+              margin="20px auto"/>
+          </Appear>
+        </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
           <Appear fid="1">
-            <Heading size={1} caps fit textColor="primary">
-              Full Width
+            <Heading caps size={4} textColor="secondary">
+              No Hoisting in real es2015
             </Heading>
+          </Appear>
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/letConst.example")}
+            margin="20px auto"/>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Heading size={1} fit textColor="primary" textFont="secondary">
+            Arrow Functions
+          </Heading>
+        </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/arrow1.example")}
+            margin="20px auto"/>
+        </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/arrow2.example")}
+            margin="20px auto"/>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Heading size={1} fit textColor="primary" textFont="secondary">
+            Enhanced Object Literals
+          </Heading>
+        </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/enhobj.example")}
+            margin="20px auto"/>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Heading size={1} fit textColor="primary" textFont="secondary">
+            Default + Rest + Spread
+          </Heading>
+        </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/default.example")}
+            margin="20px auto"/>
+          <Appear fid="1">
+            <CodePane
+              lang="javascript"
+              source={require("raw!./examples/rest.example")}
+              margin="20px auto"/>
           </Appear>
           <Appear fid="2">
-            <Heading size={1} caps fit textColor="tertiary">
-              Adjustable Darkness
-            </Heading>
+            <CodePane
+              lang="javascript"
+              source={require("raw!./examples/spread.example")}
+              margin="20px auto"/>
           </Appear>
           <Appear fid="3">
-            <Heading size={1} caps fit textColor="primary">
-              Background Imagery
-            </Heading>
+            <CodePane
+              lang="javascript"
+              source={require("raw!./examples/objSpread.example")}
+              margin="20px auto"/>
           </Appear>
         </Slide>
-        <Slide transition={["zoom", "fade"]} bgColor="primary">
-          <Heading caps fit>Flexible Layouts</Heading>
-          <Layout>
-            <Fill>
-              <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                Left
-              </Heading>
-            </Fill>
-            <Fill>
-              <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                Right
-              </Heading>
-            </Fill>
-          </Layout>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="black">
-          <BlockQuote>
-            <Quote>Wonderfully formatted quotes</Quote>
-            <Cite>Ken Wheeler</Cite>
-          </BlockQuote>
-        </Slide>
-        <Slide transition={["slide", "spin"]} bgColor="primary">
-          <Heading caps fit size={1} textColor="tertiary">
-            Smooth
-          </Heading>
-          <Heading caps fit size={1} textColor="secondary">
-            Combinable Transitions
+        <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Heading size={1} fit textColor="primary" textFont="secondary">
+            Destructuring
           </Heading>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <List>
-            <ListItem><Appear fid="1">Inline style based theme system</Appear></ListItem>
-            <ListItem><Appear fid="2">Autofit text</Appear></ListItem>
-            <ListItem><Appear fid="3">Flexbox layout system</Appear></ListItem>
-            <ListItem><Appear fid="4">React-Router navigation</Appear></ListItem>
-            <ListItem><Appear fid="5">PDF export</Appear></ListItem>
-            <ListItem><Appear fid="6">And...</Appear></ListItem>
-          </List>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/destructuring.example")}
+            margin="20px auto"/>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading size={1} caps fit textColor="tertiary">
-            Your presentations are interactive
+        <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Heading size={1} fit textColor="primary" textFont="secondary">
+            Template String Literals
           </Heading>
-          <Interactive/>
         </Slide>
-        <Slide transition={["spin", "slide"]} bgColor="tertiary">
-          <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-            Made with love in Seattle by
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/templatestr.example")}
+            margin="20px auto"/>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Heading size={1} fit textColor="primary" textFont="secondary">
+            Iterators + For..Of
           </Heading>
-          <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
+        </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/iterators-forof.example")}
+            margin="20px auto"/>
+        </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <Heading size={1} fit textColor="primary" textFont="secondary">
+            Generators
+          </Heading>
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/generators.example")}
+            margin="20px auto"/>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Heading size={1} fit textColor="primary" textFont="secondary">
+            Import + Export
+          </Heading>
+        </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/mod-export.example")}
+            margin="20px auto"/>
+          <Appear fid="2">
+            <CodePane
+              lang="javascript"
+              source={require("raw!./examples/mod-import-star.example")}
+              margin="20px auto"/>
+          </Appear>
+          <Appear fid="3">
+            <CodePane
+              lang="javascript"
+              source={require("raw!./examples/mod-export-from.example")}
+              margin="20px auto"/>
+          </Appear>
+          <Appear fid="4">
+            <CodePane
+              lang="javascript"
+              source={require("raw!./examples/mod-import-name-destr.example")}
+              margin="20px auto"/>
+          </Appear>
+          <Appear fid="5">
+            <CodePane
+              lang="javascript"
+              source={require("raw!./examples/mod-export.example")}
+              margin="20px auto"/>
+          </Appear>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={1} fit caps textColor="black">
+            The End
+          </Heading>
+          <Heading size={6} caps margin="44px auto">
+            <Link href="https://github.com/ericdouglas/ES6-Learning">further reading</Link>
+          </Heading>
         </Slide>
       </Deck>
     );

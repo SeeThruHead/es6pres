@@ -1,0 +1,12 @@
+const double = x => x * 2;
+const sum = (x, y) => x + y;
+
+const fib = x => {
+  if (x < 2) return x;
+  return fib(x - 2) + fib(x - 1);
+}
+
+const Hero = (name, alias) => ({ name, alias });
+
+Hero('Wanda Maximoff', 'Scarlet Witch');
+// { alias: 'Scarlet Witch', name: 'Wanda Maximoff' }

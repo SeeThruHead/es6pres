@@ -1,0 +1,9 @@
+const name = 'Piotr Nikolaievitch Rasputin';
+
+name = 'Stephen Vincent Strange'; // SyntaxError
+
+const HULK; // SyntaxError
+
+const avengers = {};
+
+avengers.leader = 'Captain America'; // { leader: 'Captain America' }

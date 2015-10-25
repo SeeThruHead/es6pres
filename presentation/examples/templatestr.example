@@ -1,0 +1,23 @@
+// Basic literal string creation
+const basic = `In JavaScript '\n' is a line-feed.`;
+
+// Multiline strings
+const multiline = `In JavaScript this is
+ not legal.`;
+
+// String interpolation
+var name = "Bob", time = "today";
+const str = `Hello ${name}, how are you ${time}?`;
+
+import styler from 'react-styling';
+
+// Tagged Template literals
+const style = styler`
+body {
+  color: blue;
+  .item {
+    font-size: 37px;
+  }
+}`;
+
+console.log(style); // { body: { color: 'blue', item: { fontSize: '37px' } } }

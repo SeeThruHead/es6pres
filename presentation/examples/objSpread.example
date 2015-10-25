@@ -1,0 +1,7 @@
+let { tags, dropDownLabel, ...other } = this.props;
+
+let style = { color: 'blue', fontSize: '20', backgroundColor: 'green' };
+
+let compStyle = { ...style, color: 'orange' };
+
+console.log(compStyle); // { color: 'orange', fontSize: '20', backgroundColor: 'green' }

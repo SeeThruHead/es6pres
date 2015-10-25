@@ -1,0 +1,3 @@
+// app.js
+import ln, { pi, e } from "lib/mathplusplus";
+alert("2π = " + ln(e)*pi*2);

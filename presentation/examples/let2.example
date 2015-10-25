@@ -1,0 +1,12 @@
+const sin6 = ['Doctor Optopus', 'Vulture', 'Electro', 'Kraven', 'Mysterio', 'Sandman'];
+
+function alertSpidey() {
+  for(let i = 0; i < sin6.length; i++) {
+    setTimeout(function() {
+      console.log(sin6[i]);
+    });
+  }
+  console.log(i); // ReferenceError
+}
+
+alertSpidey(); // 'Doctor Optopus', 'Vulture', 'Electro', 'Kraven', 'Mysterio', 'Sandman'

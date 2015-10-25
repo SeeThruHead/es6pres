@@ -1,0 +1,11 @@
+(function() {
+  'use strict';
+
+  console.log(x); // undefined
+  console.log(y); // ReferenceError
+  console.log(z); // ReferenceError
+
+  var x = 'Nightcrawler';
+  let y = 'Wolverine';
+  const z = 'Cyclops';
+}());
