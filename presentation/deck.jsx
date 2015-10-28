@@ -153,12 +153,29 @@ export default class extends React.Component {
             margin="20px auto"/>
         </Slide>
         <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-          <Heading size={1} fit textColor="primary" textFont="secondary">
+          <Heading size={5} textColor="black" textFont="secondary">
             Generators
           </Heading>
           <CodePane
             lang="javascript"
             source={require("raw!./examples/generators.example")}
+            margin="20px auto"/>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
+          <Heading size={1} fit textColor="primary" textFont="secondary">
+            Classes
+          </Heading>
+        </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/classes.example")}
+            margin="20px auto"/>
+        </Slide>
+        <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/classes-react.example")}
             margin="20px auto"/>
         </Slide>
         <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
